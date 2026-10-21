@@ -1,0 +1,135 @@
+/* =====================================================================
+   MobileTech Pro -- shared app shell (placeholder / dashboard screens)
+   ===================================================================== */
+
+:root {
+    --navy-900: #0a0f1c;
+    --navy-800: #0d1424;
+    --navy-700: #14203a;
+    --navy-600: #1b2b49;
+    --cyan-500: #22d3ee;
+    --cyan-600: #06b6d4;
+    --text-100: #f1f5f9;
+    --text-300: #cbd5e1;
+    --text-500: #94a3b8;
+    --font: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.app-body {
+    font-family: var(--font);
+    color: var(--text-100);
+    background:
+        radial-gradient(800px 500px at 80% -10%, rgba(34, 211, 238, 0.08), transparent 60%),
+        var(--navy-800);
+    min-height: 100vh;
+}
+
+.app-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 28px;
+    background: var(--navy-900);
+    border-bottom: 1px solid var(--navy-600);
+}
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    background: linear-gradient(145deg, var(--cyan-500), var(--cyan-600));
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.5);
+}
+
+.brand-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.app-user {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.88rem;
+}
+
+.app-user-name {
+    color: var(--text-100);
+    font-weight: 600;
+}
+
+.app-user-role {
+    color: var(--text-500);
+    text-transform: capitalize;
+}
+
+.app-logout {
+    color: var(--cyan-500);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.app-logout:hover {
+    text-decoration: underline;
+}
+
+.app-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+}
+
+.app-card {
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+    padding: 44px 40px;
+    background: var(--navy-700);
+    border: 1px solid var(--navy-600);
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.app-card-title {
+    margin: 0 0 10px;
+    font-size: 1.7rem;
+}
+
+.app-card-sub {
+    margin: 0 0 22px;
+    color: var(--text-300);
+    line-height: 1.6;
+}
+
+.app-badge {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--cyan-500);
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 999px;
+}

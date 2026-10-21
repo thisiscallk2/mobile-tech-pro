@@ -1,0 +1,129 @@
+/* =====================================================================
+   MobileTech Pro -- Coupons & Pricing
+   ===================================================================== */
+
+.coupon-code {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    font-family: "Cascadia Code", "Fira Code", monospace;
+    color: var(--cyan-400);
+    background: rgba(34, 211, 238, 0.1);
+    border-radius: 6px;
+    letter-spacing: 1px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+.status-pill--active {
+    color: var(--green-500);
+    background: rgba(34, 197, 94, 0.12);
+}
+
+.status-pill--inactive {
+    color: var(--text-500);
+    background: rgba(148, 163, 184, 0.12);
+}
+
+.field-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.field-check input[type="checkbox"] {
+    accent-color: var(--cyan-500);
+    width: 16px;
+    height: 16px;
+}
+
+.field-check .field-label {
+    font-size: 0.88rem;
+}
+
+/* Pricing */
+.cell-cost,
+.cell-selling,
+.cell-margin {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.cell-margin {
+    font-weight: 600;
+}
+
+.margin--positive {
+    color: var(--green-500);
+}
+
+.margin--negative {
+    color: var(--red-500);
+}
+
+.price-input {
+    width: 110px;
+    padding: 6px 8px;
+    background: var(--navy-800);
+    border: 1px solid var(--navy-600);
+    border-radius: 6px;
+    color: var(--text-100);
+    font-size: 0.85rem;
+    font-family: var(--font);
+    text-align: right;
+}
+
+.price-input:focus {
+    border-color: var(--cyan-500);
+    outline: none;
+}
+
+.price-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.price-save-btn {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: var(--cyan-500);
+    color: #04222b;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.price-save-btn:hover {
+    filter: brightness(1.1);
+}
+
+.cell-mono {
+    font-family: "Cascadia Code", "Fira Code", monospace;
+    font-size: 0.82rem;
+    color: var(--text-500);
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.toolbar-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

@@ -1,0 +1,209 @@
+/* =====================================================================
+   MobileTech Pro -- POS Receipt Print Styles
+   Loaded with media="print" -- only applies when printing.
+   Hides all UI chrome and shows the receipt centered on paper.
+   ===================================================================== */
+
+.dash-layout,
+.sidebar,
+.topbar,
+.pos-main,
+.pos-products,
+.pos-sidebar,
+.pos-toast,
+.pos-cart-items,
+.pos-cart-foot,
+.pos-customer-panel,
+.pos-customer-panel *,
+.pos-cart-item,
+.pos-order-summary,
+.pos-payment-methods,
+.pos-process-btn,
+.pos-secondary-actions,
+.pos-categories,
+.pos-header,
+.pos-search,
+.pos-grid {
+    display: none !important;
+}
+
+html, body, .dash-body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: "Courier New", monospace !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.receipt-overlay {
+    position: static !important;
+    background: none !important;
+    display: block !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+.receipt-overlay[hidden] {
+    display: none !important;
+}
+
+.receipt-modal {
+    max-width: 100% !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+}
+
+.receipt-body {
+    padding: 0 12px !important;
+    color: #000 !important;
+}
+
+.receipt-icon-wrap,
+.receipt-badge,
+.receipt-actions {
+    display: none !important;
+}
+
+.receipt-title {
+    color: #000 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 6px !important;
+}
+
+.receipt-store {
+    border-color: #ccc !important;
+    color: #333 !important;
+    font-size: 0.72rem !important;
+    padding: 8px 0 !important;
+    margin-bottom: 8px !important;
+}
+
+.receipt-store strong {
+    color: #000 !important;
+}
+
+.receipt-meta {
+    font-size: 0.72rem !important;
+    margin-bottom: 8px !important;
+}
+
+.receipt-meta-row {
+    border-bottom-color: #eee !important;
+    color: #555 !important;
+}
+
+.receipt-meta-row span:last-child {
+    color: #000 !important;
+}
+
+.receipt-items {
+    font-size: 0.72rem !important;
+}
+
+.receipt-items th {
+    border-bottom-color: #ccc !important;
+    color: #555 !important;
+}
+
+.receipt-items td {
+    border-bottom-color: #eee !important;
+    color: #000 !important;
+}
+
+.r-amount {
+    color: #000 !important;
+}
+
+.receipt-totals {
+    font-size: 0.75rem !important;
+}
+
+.receipt-totals-row {
+    color: #555 !important;
+}
+
+.receipt-totals-row span:last-child {
+    color: #000 !important;
+}
+
+.receipt-total-row {
+    border-top-color: #ccc !important;
+    color: #000 !important;
+}
+
+/* Print Quote popup window */
+.print-quote {
+    margin: 0 !important;
+    padding: 16px !important;
+    color: #000 !important;
+    background: #fff !important;
+}
+
+.print-quote .receipt-body {
+    padding: 0 !important;
+}
+
+.print-quote .receipt-store {
+    border-color: #ccc !important;
+    color: #333 !important;
+    font-size: 0.72rem !important;
+}
+
+.print-quote .receipt-store strong {
+    color: #000 !important;
+}
+
+.print-quote .receipt-meta {
+    font-size: 0.72rem !important;
+}
+
+.print-quote .receipt-meta-row {
+    border-bottom-color: #eee !important;
+    color: #555 !important;
+}
+
+.print-quote .receipt-meta-row span:last-child {
+    color: #000 !important;
+}
+
+.print-quote .receipt-items {
+    font-size: 0.72rem !important;
+}
+
+.print-quote .receipt-items th {
+    border-bottom-color: #ccc !important;
+    color: #555 !important;
+}
+
+.print-quote .receipt-items td {
+    border-bottom-color: #eee !important;
+    color: #000 !important;
+}
+
+.print-quote .receipt-totals {
+    font-size: 0.75rem !important;
+}
+
+.print-quote .receipt-totals-row {
+    color: #555 !important;
+}
+
+.print-quote .receipt-totals-row span:last-child {
+    color: #000 !important;
+}
+
+.print-quote .receipt-total-row {
+    border-top-color: #ccc !important;
+    color: #000 !important;
+}
+
+.print-quote button {
+    display: none !important;
+}
+
+@page {
+    margin: 8mm;
+    size: auto;
+}

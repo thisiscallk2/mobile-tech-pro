@@ -1,0 +1,17 @@
+# MobileTech Pro -- route everything through index.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Serve existing files/directories directly (css, js, uploads, ...)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else -> front controller
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Never serve the .env or other dot-files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,316 @@
+/* =====================================================================
+   MobileTech Pro -- Inventory Management (extends dashboard.css + users.css)
+   ===================================================================== */
+
+.dot--amber {
+    background: var(--amber-500);
+}
+
+/* Low-stock alert banner */
+.alert-banner {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 18px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: #fcd34d;
+    font-size: 0.88rem;
+}
+
+.alert-banner strong {
+    color: #fde68a;
+}
+
+/* Product cell */
+.prod-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prod-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    object-fit: cover;
+    background: var(--navy-800);
+    flex-shrink: 0;
+}
+
+.prod-thumb--placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #04222b;
+    background: linear-gradient(145deg, var(--cyan-400), var(--cyan-600));
+}
+
+.prod-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.prod-name {
+    color: var(--text-100);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.prod-name:hover {
+    color: var(--cyan-400);
+}
+
+.prod-sku {
+    font-size: 0.74rem;
+    color: var(--text-500);
+    font-family: "Consolas", "Courier New", monospace;
+}
+
+.cell-price {
+    font-weight: 600;
+}
+
+/* Category pills */
+.cat-pill {
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.cat-color-0 { color: #7dd3fc; background: rgba(56, 189, 248, 0.15); }
+.cat-color-1 { color: #c4b5fd; background: rgba(167, 139, 250, 0.15); }
+.cat-color-2 { color: #fcd34d; background: rgba(245, 158, 11, 0.15); }
+.cat-color-3 { color: #6ee7b7; background: rgba(16, 185, 129, 0.15); }
+.cat-color-4 { color: #f9a8d4; background: rgba(236, 72, 153, 0.15); }
+
+/* Stock qty + progress bar */
+.cell-stock {
+    min-width: 120px;
+}
+
+.stock-qty {
+    font-weight: 600;
+}
+
+.stock-bar {
+    display: block;
+    height: 5px;
+    margin-top: 6px;
+    border-radius: 3px;
+    background: var(--navy-600);
+    overflow: hidden;
+}
+
+.stock-bar-fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.bar--green { background: var(--green-500); }
+.bar--amber { background: var(--amber-500); }
+.bar--red { background: var(--red-500); }
+
+/* Status modifiers (base .status-pill lives in users.css) */
+.status--in {
+    color: #86efac;
+    background: rgba(34, 197, 94, 0.14);
+}
+
+.status--low {
+    color: #fcd34d;
+    background: rgba(245, 158, 11, 0.16);
+}
+
+.status--out {
+    color: #fca5a5;
+    background: rgba(239, 68, 68, 0.16);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Slide-over additions                                               */
+/* ------------------------------------------------------------------ */
+.slideover--wide {
+    width: 480px;
+}
+
+.field-row {
+    display: flex;
+    gap: 12px;
+}
+
+.field-row .field {
+    flex: 1;
+    min-width: 0;
+}
+
+textarea.field-input {
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Drop zone */
+.dropzone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    margin-bottom: 18px;
+    padding: 16px;
+    border: 2px dashed var(--navy-500);
+    border-radius: 12px;
+    background: var(--navy-800);
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.dropzone.is-dragover {
+    border-color: var(--cyan-500);
+    background: rgba(34, 211, 238, 0.06);
+}
+
+.dropzone-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropzone-prompt {
+    color: var(--text-500);
+    pointer-events: none;
+}
+
+.dropzone-text {
+    margin: 8px 0 2px;
+    font-size: 0.9rem;
+    color: var(--text-300);
+}
+
+.dropzone-browse {
+    color: var(--cyan-400);
+    font-weight: 600;
+}
+
+.dropzone-hint {
+    margin: 0;
+    font-size: 0.76rem;
+    color: var(--text-600);
+}
+
+.dropzone-preview {
+    display: none;
+    max-height: 150px;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.dropzone.has-image .dropzone-preview {
+    display: block;
+}
+
+.dropzone.has-image .dropzone-prompt {
+    display: none;
+}
+
+/* Live preview card */
+.preview-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    padding: 14px;
+    border: 1px solid var(--navy-600);
+    border-radius: 12px;
+    background: var(--navy-750);
+    position: relative;
+}
+
+.preview-card.is-valid {
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+.preview-check {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--green-500);
+    color: #04222b;
+}
+
+.preview-card.is-valid .preview-check {
+    display: inline-flex;
+}
+
+.preview-img {
+    width: 46px;
+    height: 46px;
+    border-radius: 9px;
+    object-fit: cover;
+    background: var(--navy-800);
+    flex-shrink: 0;
+}
+
+.preview-img:not([src]) {
+    visibility: hidden;
+}
+
+.preview-meta {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.preview-name {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.preview-sub {
+    font-size: 0.78rem;
+    color: var(--text-500);
+}
+
+.preview-figures {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.preview-price {
+    font-weight: 700;
+    color: var(--cyan-400);
+}
+
+.preview-stock {
+    font-size: 0.76rem;
+    color: var(--text-500);
+}
+
+@media (max-width: 900px) {
+    .cell-price,
+    .prod-sku {
+        white-space: nowrap;
+    }
+}
